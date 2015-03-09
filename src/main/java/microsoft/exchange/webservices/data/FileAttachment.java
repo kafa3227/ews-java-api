@@ -220,6 +220,7 @@ public final class FileAttachment extends Attachment {
       this.load();
     } finally {
       this.loadToStream.flush();
+      this.loadToStream.close();
       this.loadToStream = null;
     }
 
